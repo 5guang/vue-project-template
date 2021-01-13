@@ -1,14 +1,9 @@
 <template>
-  <ul>
-    <li>
-      1、
-      <TeloportDemo />
-    </li>
-    <li>
-      2、
-      <LifeCycle />
-    </li>
-  </ul>
+  <section class="lifecycle">
+    生命周期对比
+    <p>{{ msg }}</p>
+    <button @click="changeMsg">change</button>
+  </section>
 </template>
 
 <script lang="ts">
