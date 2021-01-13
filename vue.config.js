@@ -37,7 +37,6 @@ function setCssProcessors(/** @type {ChainConfig} */ config) {
   );
 }
 
-console.log(process.env.VUE_APP_SECRET)
 /** @type {Options} */
 const config = {
   publicPath: "./",

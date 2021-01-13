@@ -1,7 +1,10 @@
 <template>
-  <section class="Home">
-    Home组件
-  </section>
+  <ul>
+    <li>
+      1、
+      <TeloportDemo />
+    </li>
+  </ul>
 </template>
 
 <script lang="ts">
