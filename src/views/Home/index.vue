@@ -1,16 +1,19 @@
 <template>
   <ul>
     <li>
-      1、
       <TeloportDemo />
     </li>
     <li>
-      2、
       <LifeCycle />
     </li>
     <li>
-      3、
-      <CssVal color="blue" />
+      <V2CssVal color="blue" />
+    </li>
+    <li>
+      <V3CssVal :color="color" @click="changeColor" />
+    </li>
+    <li>
+      <CssModule />
     </li>
   </ul>
 </template>
