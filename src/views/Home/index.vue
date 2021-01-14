@@ -8,6 +8,10 @@
       2、
       <LifeCycle />
     </li>
+    <li>
+      3、
+      <CssVal color="blue" />
+    </li>
   </ul>
 </template>
 
