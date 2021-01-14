@@ -1,5 +1,5 @@
 <template>
-  <p class="box" :style="styleVal">{{ styleVal["--color"] }}</p>
+  <p class="box">vue3cssVars</p>
 </template>
 
 <script lang="ts">
@@ -13,5 +13,7 @@ export default vm;
 
 .box {
   color: var(--color);
+  border: var(--border);
+  background: var(--bgColor);
 }
 </style>
