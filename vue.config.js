@@ -51,6 +51,8 @@ const config = {
         .use(require("webpack-bundle-analyzer").BundleAnalyzerPlugin);
     }
   },
+  configureWebpack(config) {
+  },
   devServer
 };
 
