@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { defineComponent, onMounted, onUpdated, ref } from "vue";
 
 export default defineComponent({
