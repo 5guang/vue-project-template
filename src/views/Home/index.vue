@@ -15,6 +15,9 @@
     <li>
       <CssModule />
     </li>
+    <li>
+      <VueReactive />
+    </li>
   </ul>
 </template>
 
