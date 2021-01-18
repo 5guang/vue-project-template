@@ -1,10 +1,10 @@
 import { StorageType } from "@/constants/storage";
 import { AbstractStorage } from "./abstract";
-import { cookieStorage } from "./cookieStorage";
+import { cStorage } from "./cookieStorage";
 import { sStorage } from "./sessionStorage";
 
 const mapStorage = {
-  [StorageType.cookie]: cookieStorage,
+  [StorageType.cookie]: cStorage,
   [StorageType.sessionStorage]: sStorage
 };
 
