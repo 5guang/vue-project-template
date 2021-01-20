@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-type PlainObject = Record<string, any>;
+type PlainObject = Record<keyof any, any>;
 
 type UnWrapPromise<T> = T extends Promise<infer V> ? V : T;
 

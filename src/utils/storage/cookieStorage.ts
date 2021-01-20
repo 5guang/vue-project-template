@@ -1,10 +1,13 @@
 import { CustomStorage, StorageResult } from "@/types";
 import cookie, { CookieAttributes } from "js-cookie";
+import { extend } from "../tools";
 import { AbstractStorage } from "./abstract";
 
 class SuperCookieStorage implements CustomStorage {
+  constructor(private defaultOpt: CookieAttributes) {}
   clear(): void {
-    document.cookie = "";
+    const cookies = document.cookie.split(";");
+    cookies.forEach(v => cookie.remove(v.split("-")[0]));
   }
   getItem(key: string): string | null {
     const result = cookie.get(key);
@@ -13,18 +16,14 @@ class SuperCookieStorage implements CustomStorage {
   removeItem(key: string): void {
     cookie.remove(key);
   }
-  setItem(
-    key: string,
-    value: string,
-    opt: CookieAttributes = { expires: 7 }
-  ): void {
-    cookie.set(key, value, opt);
+  setItem(key: string, value: string, opt: CookieAttributes = {}): void {
+    cookie.set(key, value, extend(this.defaultOpt, opt));
   }
 }
 
 class CookieStorage extends AbstractStorage {
-  constructor() {
-    super(new SuperCookieStorage());
+  constructor(opt: CookieAttributes = { expires: 7 }) {
+    super(new SuperCookieStorage(opt));
   }
   setItemByOption(key: string, value: string, opt: CookieAttributes): void {
     cookie.set(key, value, opt);

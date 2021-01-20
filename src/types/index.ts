@@ -4,6 +4,6 @@ export type StorageResult<T = unknown> =
 
 export interface CustomStorage {
   getItem(key: string): string | null;
-  setItem(key: string, value: string): void;
+  setItem(key: string, value: string, opt?: PlainObject): void;
   removeItem(key: string): void;
 }

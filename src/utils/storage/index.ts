@@ -8,4 +8,5 @@ const mapStorage = {
   [StorageType.sessionStorage]: sStorage
 };
 
-export const storage = (type: StorageType): AbstractStorage => mapStorage[type];
+export const instaceStorage = (type: StorageType): AbstractStorage =>
+  mapStorage[type];
