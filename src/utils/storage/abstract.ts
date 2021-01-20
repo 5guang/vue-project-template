@@ -5,7 +5,7 @@ export abstract class AbstractStorage {
 
   abstract getItem(key: string): StorageResult;
 
-  setItem(key: string, value: unknown) {
-    this.storage.setItem(key, JSON.stringify(value));
+  setItem(key: string, value: unknown, opt?: PlainObject) {
+    this.storage.setItem(key, JSON.stringify(value), opt);
   }
 }
